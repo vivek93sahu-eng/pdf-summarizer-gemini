@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-summarizer-gemini"
+version = "1.0.0"
+description = "LangChain + Gemini PDF summarizer with a Streamlit chat UI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "streamlit>=1.40,<2",
+    "langchain-core>=1.0,<2",
+    "langchain-google-genai>=4.0,<5",
+    "langchain-text-splitters>=1.0,<2",
+    "pypdf>=5.0,<7",
+    "python-dotenv>=1.0,<2",
+    "pandas>=2.0,<3",
+    "tiktoken>=0.7,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"
