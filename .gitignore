@@ -1,0 +1,47 @@
+# ---------- Secrets ----------
+.env
+.env.*
+!.env.example
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ---------- Virtual environments ----------
+.venv/
+venv/
+env/
+ENV/
+
+# ---------- Testing / tooling ----------
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ---------- Streamlit ----------
+.streamlit/secrets.toml
+
+# ---------- OS / editors ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# ---------- Generated output ----------
+outputs/
+*.summary.md
+
+# Large demo PDF, fetched on demand by scripts/fetch_samples.py
+samples/attention-is-all-you-need.pdf
